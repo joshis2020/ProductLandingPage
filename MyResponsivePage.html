@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<div id="myPageWrapper">
+  <style>
+    .mybackgroundclass {
+      background-image: url("https://s3.amazonaws.com/casedoc/HandicraftBG.jpg");
+      max-width: 100%;
+      height: auto;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+
+    }
+
+    @media only screen and (max-width: 600px) {
+  		body {
+    	background-color: lightblue;
+ 	 }
+	}
+
+    .flex-container {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .logodiv {
+      width: 35vw;
+      margin-left: 30px;
+      margin-top: 10px;
+    }
+
+    .logo {
+      height: 100px;
+      width: 180px;
+
+      border-radius: 20px;
+    }
+
+    .nav-bar {
+
+      display: flex;
+      height: 100%;
+      flex-direction: row;
+      justify-content: space-around;
+
+    }
+
+    .nav-link {
+      display: flex;
+      height: 100%;
+      text-decoration: none;
+      color: white;
+      flex-direction: row;
+      font-family: 'Abhaya Libre';
+      font-size: 32px;
+      font-weight: bold;
+
+    }
+
+    .myheadersfeatures {
+      display: flex;
+      height: 100%;
+      flex-direction: row;
+      background-color: #ff0066;
+      border-style: solid;
+      border-width: 5px;
+      border-color: #ffffff;
+    }
+
+    .listunderheaders {
+      margin-right: 70px;
+      color: white;
+
+    }
+
+    body {
+      font-family: 'Abhaya Libre';
+      font-size: 15px;
+
+    }
+
+    .section-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      background: #ffe6f2;
+      opacity: 0.9;
+      margin-top: 20px;
+
+    }
+
+    .btn {
+      margin-top: 15px;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      margin-left: 550px;
+      font-size: 18px;
+      font-family: 'Abhaya Libre';
+      border-radius: 25px;
+      background: #d5ff80;
+      font-weight: bold;
+      margin-bottom: 10px;
+
+    }
+
+    .btn1{
+
+      margin-top: 15px;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      margin-left: 20px;
+      margin-right: 20px;
+      font-size: 18px;
+      font-family: 'Abhaya Libre';
+      border-radius: 25px;
+      background: #d5ff80;
+      font-weight: bold;
+      margin-bottom: 20px;
+
+    }
+
+    input[type="email"] {
+      max-width: 275px;
+      width: 100%;
+      padding: 5px;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+      font-family: 'Abhaya Libre';
+      background: #d5ff80;
+      border-radius: 20px;
+    }
+
+    .container {
+      max-width: 1000px;
+      width: 100%;
+      margin: 0 auto;
+
+    }
+
+    .grid {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 105px;
+      width: 10vw;
+      color: darkorange;
+      margin-top: 10px;
+      border-radius: 20px;
+      margin-right: 20px;
+    }
+
+    .feature {
+      font-size: 18px;
+      background: #ffe6f2;
+      margin-top: 10px;
+      opacity: 0.9;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    .myvideo {
+      margin-top: 10px;
+      margin-left: 250px;
+      border-style: solid;
+      border-width: 5px;
+      border-color: #ffe6f2;
+    }
+
+    .pricing{
+    	display: flex;
+    	flex-direction: row;
+    	margin-top: 30px;
+
+    }
+
+    .hitems{
+    	display: flex;
+    	flex-direction: column;
+    	margin-left: 20px;
+    	margin-right: 20px;
+    	margin-top: 20px;
+    	margin-bottom: 20px;
+    	width: 300px;
+    	background: #ffe6f2;
+    	opacity: 0.9;
+    	font-size: 20px;
+    	border-style: solid;
+    	border-color: black;
+    }
+
+    .level{
+    	background: white;
+    	font-size: 20px;
+    	text-align: center;
+    	text-transform: uppercase;
+    	padding-bottom: 10px; 
+    	padding-top: 10px;
+    	margin-top: 20px;
+    	margin-bottom: 20px;
+    	border-style: solid;
+    	border-color: #ff0066;
+    	font-weight: bold;
+
+    }
+
+    .money{
+    	text-align: center;
+    	margin-top: 20px;
+    	margin-bottom: 20px;
+    	border-style: solid;
+    	border-color: #ff0066;
+    }
+
+    .footer{
+    	margin-top: 20px;
+    	margin-left: 500px;
+    	margin-bottom: 10px;
+    	display: flex;
+    	flex-direction: row;
+    	background: #ffe6f2;
+    	border-style: solid;
+    	border-color: black;
+    }
+
+    .footerlist{
+    	display: flex;
+    	flex-direction: row;
+    	color: #ff0066;
+    	
+
+    }
+	.flistitems{
+		padding-right: 20px;
+		margin-left: 30px;
+		font-weight: 80%;
+		font-size: 16px;
+		color: black;
+
+	}
+
+	.cw{
+		padding-top: 10px;
+		padding-bottom: 10px;
+		font-weight: bold;
+	}
+
+  </style>
+
+  <header id="header">
+
+    <link href='https://fonts.googleapis.com/css?family=Abhaya Libre' rel='stylesheet'>
+
+    <div id="insideHeader" class="flex-container">
+
+      <title>Indian Handicrafts</title>
+
+      <div class="logodiv">
+        <img id="header-img" class="logo" src="https://s3.amazonaws.com/casedoc/logo2.png" alt="Art logo">
+      </div>
+
+      <nav id="nav-bar" class="nav-bar">
+
+        <ul class="myheadersfeatures">
+
+          <li class="listunderheaders"><a href="#features" class="nav-link">Features</a></li>
+          <li class="listunderheaders"><a href="#video" class="nav-link">How It Works</a></li>
+          <li class="listunderheaders"><a href="#Pricing" class="nav-link">Pricing</a></li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+  <body class="mybackgroundclass">
+
+    <section class="section-container">
+
+      <h2>Handicrafts are a wonderful way to add beauty to life. And when it comes to crafts grounded in traditional Indian arts that are handcrafted by skilled artisans and craftspeople, there is no better place to check into than Engrave. No matter what
+        your ethnic fix is, be it Madhubani, Warli, Bidri, Dokra, Marble Inlay, or Woodworking, Indian and handmade, this is the place for you. Enjoy.</h2>
+
+      <form id="form" action="https://www.freecodecamp.com/email-submit">
+        <input type="email"  id="email" name="email" placeholder="Enter your email" required>
+        <input type="submit" id="submit" value="Get Started" class="btn">
+      </form>
+
+    </section>
+
+    <div class="container">
+      <div id="features">
+        <div class="grid">
+
+          <img src="https://s3.amazonaws.com/casedoc/l1.png" alt="Free delivery" class="icon">
+
+          <div class="feature">
+            <h2>Free fast delivery</h2>
+            <p> Guaranteed free One-Day, Two-Day and Standard Delivery on eligible items</p>
+          </div>
+
+        </div>
+
+        <div class="grid">
+
+          <img src="https://s3.amazonaws.com/casedoc/logofeature2.jpg" alt="High quality" class="icon">
+
+          <div class="feature">
+            <h2>We offer best quality handicrafts</h2>
+            <p> Quality is never an accident. It is always the result of intelligent effort. All our products are handmade and of highest quality.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <iframe id="video" width="420" height="345"  src="https://www.youtube.com/embed/XM9y2GI-ne0" class="myvideo">
+</iframe>
+
+	<section id="Pricing" class="pricing">
+
+		<div id="Textile" class="hitems">
+	      <div class="level">
+	        Textile handicrafts and fabrics
+	      </div>
+	      <h2 class="money">$600</h2>
+	      <ol>
+	        <li>Lorem ipsum.</li>
+	        <li>Lorem ipsum.</li>
+	        <li>Lorem ipsum dolor.</li>
+	        <li>Lorem ipsum.</li>
+	      </ol>
+	      <button class="btn1">Select</button>
+	    </div>
+
+	    <div id="Wood" class="hitems">
+	      <div class="level">
+	        Wood works
+	      </div>
+	      <h2 class="money">$1600</h2>
+	      <ol>
+	        <li>Lorem ipsum.</li>
+	        <li>Lorem ipsum.</li>
+	        <li>Lorem ipsum dolor.</li>
+	        <li>Lorem ipsum.</li>
+	      </ol>
+	      <button class="btn1">Select</button>
+	    </div>
+
+	    <div id="Stone" class="hitems"> 
+	      <div class="level">
+	        Stone craft
+	      </div>
+	      <h2 class="money">$800</h2>
+	      <ol>
+	        <li>Lorem ipsum.</li>
+	        <li>Lorem ipsum.</li>
+	        <li>Lorem ipsum dolor.</li>
+	        <li>Lorem ipsum.</li>
+	      </ol>
+	      <button class="btn1">Select</button>
+	    </div>
+		
+	</section>
+
+	<footer class="footer">
+	    <ul class="footerlist">
+	      <li><a href="#" class="flistitems">Privacy</a></li>
+	      <li><a href="#" class="flistitems">Terms</a></li>
+	      <li><a href="#" class="flistitems">Contact</a></li>
+	    </ul>
+	    <span class="cw">Copyright 2019, Indian Handicrafts</span>
+ 	 </footer>
+
+    </div>
+  </body>
+</div>
+
+</html>
